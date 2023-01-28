@@ -34,5 +34,11 @@ pipeline {
       }
     }
 
+    stage('Deploy') {
+      steps {
+        sh './mvnw spring-boot:run >>test.log &'
+      }
+    }
+
   }
 }
