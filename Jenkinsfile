@@ -13,5 +13,14 @@ pipeline {
       }
     }
 
+    stage('Static Analysis') {
+      steps {
+        sh '''mvn clean verify sonar:sonar \\
+  -Dsonar.projectKey=Petclinic-Spring \\
+  -Dsonar.host.url=http://3.110.233.247:9000 \\
+  -Dsonar.login=sqp_a6dda4685e6bd10aa4fc4eeb7b7caa592a0b146e'''
+      }
+    }
+
   }
 }
