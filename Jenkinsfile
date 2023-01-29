@@ -17,7 +17,7 @@ pipeline {
       steps {
         sh '''mvn clean -DskipTests=true verify sonar:sonar \\
   -Dsonar.projectKey=Petclinic-Spring \\
-  -Dsonar.host.url=http://3.110.233.247:9000 \\
+  -Dsonar.host.url=http://13.234.56.2:9000 \\
   -Dsonar.login=sqp_a6dda4685e6bd10aa4fc4eeb7b7caa592a0b146e'''
       }
     }
